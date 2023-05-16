@@ -1,0 +1,227 @@
+@import url("https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap");
+
+img {
+  max-width: 100%;
+}
+
+body {
+  background-color:#24292e;
+  font-family: "Kumbh Sans", sans-serif;  
+  text-align: center;    
+  padding-bottom: 100px;
+}
+
+main {
+  display: flex;  
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  padding: 50px 0;      
+}
+
+.devicon-github-original{
+  font-size: 60px;
+  margin-bottom: 30px;
+  color: #ffffff;
+}
+
+
+
+.container {
+  width: clamp(300px,90vw,960px);
+  /* width: 80%; */
+   /* se for uma tela menor que 980px vai se adaptar a 60%*/
+  /* quando chegar em 980px para de aumentar */
+  /* max-width: 960px;  */
+  
+  box-shadow: rgba(0, 0, 0, 0.3) 0px 25px 50px -12px;
+  background-color: #fff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-radius: 30px;
+  padding: 30px;
+}
+
+.container header {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  padding: 30px 0;
+}
+
+.container header h2 {
+  font-size: 20px;
+  font-weight: 700;
+  margin-bottom: 30px;
+}
+
+.container header #input-search {
+  width: 400px;
+  font-size: 17px;
+  margin: 0 auto;
+  padding: 10px;
+  border-radius: 7px;
+  border: 1px solid grey;
+}
+
+.container header #btn-search {
+  width: 200px;
+  font-size: 17px;
+  margin: 20px auto 0;
+  padding: 10px;
+  border-radius: 7px;  
+  cursor: pointer;
+  border: 1px solid grey;
+}
+
+.container header #btn-search:hover {
+  background-color: hotpink;
+  color: #ffffff;
+  border-color: #ffffff;
+}
+
+.container .profile-data{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 40px;  
+}
+
+.container .profile-data .info {
+  display: flex;  
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+.container .profile-data .info .data{
+  padding: 40px;
+  width: 50%;
+}
+
+.container .profile-data .info img{
+  width: 50%;
+  border-radius: 50%;
+  border: 10px solid hotpink;
+}
+
+.container .profile-data .info h1{
+  font-size: 20px;
+  margin-bottom: 20px;
+  font-weight: 700;
+}
+
+.container .profile-data .info p{
+  font-size: 15px;  
+  font-weight: 400;
+  line-height: 23px;
+}
+
+/* REPOSITORIES */
+
+.container .profile-data .repositories h2{
+  margin: 30px 0;
+  text-align: center;
+}
+
+.container .profile-data .repositories ul.repositories-itens{
+  display: grid;
+  grid-template-columns: repeat(auto-fit,minmax(200px,1fr));
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+
+  width:clamp(310px,60vw,700px) 
+}
+
+.container .profile-data .repositories ul li a{
+  display: block;
+  padding:20px 10px;
+  
+  border: 1px solid grey;  
+  box-shadow: 5px 5px 5px 0px rgba(0, 0, 0, 0.5);
+  border-radius: 15px;
+
+  transition: 0.3s ease-in-out;
+}
+
+.container .profile-data .repositories ul li a:hover{
+  background-color:hotpink;
+  color: #fff
+}
+
+.container .profile-data.hide{
+  display: none;
+}
+/* EVENTS */
+.events{
+  margin-top: 20px;
+  padding: 20px;
+  width: 100%;
+  background-color: #F2F2F2;
+}
+.events h2{
+margin-bottom: 30px;
+font-weight: 700;
+}
+.events ul {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+.events ul li span{
+font-weight: 700;
+}
+/* REPOSITORIES INFO */
+.repositories-info{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  gap: 5px;
+  margin-top: 10px;
+}
+.repositories-info li{
+  font-size: 14px;
+  padding: 3px;
+  border-radius: 5px;
+  background-color: #6A5ACD;
+}
+
+@media (max-width: 1280px) {
+  /* .container {
+    flex-direction: column;
+    width: 90%;
+    border-radius: 20px;
+  } */
+
+
+  /* .container header h1 {
+    font-size: 24px;
+    text-align: center;
+  } */
+}
+
+@media (max-width: 768px) {
+  .container header,
+  .container header #input-search
+  {
+    width: 100%;
+  }
+}
+
+@media (max-width: 425px) {
+  main {
+    padding: 15% 0;    
+  }
+
+  .container .profile-data .info img{
+    margin-bottom: 20px;
+  }
+
+  .container .profile-data .info img,
+  .container .profile-data .info .data
+  {
+    width: 100%;
+    padding: 0;
+  }
+}
