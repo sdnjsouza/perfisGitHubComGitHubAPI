@@ -1,7 +1,7 @@
 # 🚀 Searching Profile GitHub 
 ## Project developed in DevQuest
 
-<br>
+
 
 
 
@@ -9,10 +9,10 @@
   <img alt="Preview" src=".github/api-gitihub.gif" width="auto">
 </p>
 
-<br>
-### Links
+
+## 💻 Links
 - Live Site URL: [https://sdnjsouza.github.io/searchProfileGitHub/]
-<br>
+
 ## 🧑‍💻 Technologies used:
 - HTML
 - CSS
