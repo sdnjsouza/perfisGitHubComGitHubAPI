@@ -1,5 +1,5 @@
 # 🚀 Searching Profile GitHub 
-## Project to DevQuest
+## Project developed in DevQuest
 
 <br>
 
