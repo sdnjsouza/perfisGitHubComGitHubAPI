@@ -10,7 +10,9 @@
 </p>
 
 <br>
-
+### Links
+- Live Site URL: [https://sdnjsouza.github.io/searchProfileGitHub/]
+<br>
 ## 🧑‍💻 Technologies used:
 - HTML
 - CSS
