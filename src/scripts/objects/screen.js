@@ -32,31 +32,33 @@ const screen = {
                                         </div>`
         }
         this.renderUserEvents(user)
-    },  
-    renderUserEvents(user){ 
+    },
+    renderUserEvents(user) {
         let createAndPushEvents = ''
         let createEvents = 0
         let pushEvents = 0
 
-       user.events.forEach(event =>{
-        if (event.type === "CreateEvent") {
-            createAndPushEvents += ` <li>
-            <span>${event.repo.name}</span> - Não contém Mensagem.
-            </li>`
-        }
-        createEvents++
-        if (event.type === "PushEvent") {
-            createAndPushEvents += ` <li>
-                        <span>${event.repo.name}
-                        </span> - 
-                        ${event.payload.commits[0].message ?? 'Não contém Mensagem.'}
-                        </li>`
-        }
-        pushEvents++
-        if ((createEvents + pushEvents) == 10) {
-            return
-        }
-       })
+        user.events.forEach(event => {
+           
+            if ((createEvents + pushEvents) < 10) {
+                if (event.type === "CreateEvent") {
+                    createAndPushEvents += ` <li>
+                <span>${event.repo.name}</span> - Não contém Mensagem.
+                </li>`
+                    createEvents++
+                }
+                if (event.type === "PushEvent") {
+                    createAndPushEvents += ` <li>
+                            <span>${event.repo.name}
+                            </span> - 
+                            ${event.payload.commits[0].message ?? 'Não contém Mensagem.'}
+                            </li>`
+                            pushEvents++
+                }
+            }else{
+                return;
+            }
+        })
 
         if (user.events.length > 0) {
             this.userProfile.innerHTML += ` <div class="events">
@@ -65,8 +67,8 @@ const screen = {
                                ${createAndPushEvents}
                             </ul>
                         </div>`
-        } 
-       
+        }
+
     },
     renderNotFound() {
         this.userProfile.innerHTML = "<h3>Usuário não encontrado.</h3>"
